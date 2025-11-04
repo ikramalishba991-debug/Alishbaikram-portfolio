@@ -370,19 +370,63 @@
                 
                 <!-- Contact Form (Placeholder) -->
                <!-- Make sure you have method="POST" -->
-<form action="https://api.web3forms.com/submit" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST" class="text-left">
 
-    <!-- This is your secret key from Web3Forms -->
-    <input type="hidden" name="access_key" value="a012fe5e-9eb5-40f8-8ee8-0f082c6cc28b">
+  <!-- This is your secret key from Web3Forms -->
+  <input type="hidden" name="access_key" value="a012fe5e-9eb5-40f8-8ee8-0f082c6cc28b">
 
-    <!-- The rest of your form fields (Name, Email, Message) -->
-    <!-- These must have 'name' attributes -->
-    <input type="text" name="Name" required>
-    <input type="email" name="Email" required>
-    <textarea name="Message" required></textarea>
+  <!-- 1. Name Field Group -->
+  <!-- This div stacks the name field -->
+  <div class="mb-6">
+    <label for="name" class="block text-sm font-mono text-primary mb-2">Name</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="Name" 
+      placeholder="Your Name"
+      class="w-full bg-dark-800 border border-dark-700 rounded-md py-3 px-4 text-light-100 focus:outline-none focus:ring-2 focus:ring-primary" 
+      required 
+    />
+  </div>
 
-    <!-- Your submit button -->
-    <button type="submit">Send Message</button>
+  <!-- 2. Email Field Group -->
+  <!-- This div stacks the email field -->
+  <div class="mb-6">
+    <label for="email" class="block text-sm font-mono text-primary mb-2">Email</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="Email" 
+      placeholder="your.email@example.com"
+      class="w-full bg-dark-800 border border-dark-700 rounded-md py-3 px-4 text-light-100 focus:outline-none focus:ring-2 focus:ring-primary" 
+      required 
+    />
+  </div>
+
+  <!-- 3. Message Field Group -->
+  <!-- This div stacks the message field -->
+  <div class="mb-6">
+    <label for="message" class="block text-sm font-mono text-primary mb-2">Message</label>
+    <textarea 
+      id="message" 
+      name="Message" 
+      rows="5" 
+      placeholder="Your message..."
+      class="w-full bg-dark-800 border border-dark-700 rounded-md py-3 px-4 text-light-100 focus:outline-none focus:ring-2 focus:ring-primary" 
+      required
+    ></textarea>
+  </div>
+
+  <!-- 4. Submit Button Group -->
+  <!-- This div centers the button -->
+  <div class="text-center">
+    <button 
+      type="submit" 
+      class="font-mono text-primary border-2 border-primary text-lg px-8 py-4 rounded-md hover:bg-primary hover:bg-opacity-10 transition duration-300"
+    >
+      Send Message
+    </button>
+  </div>
 
 </form>
             </div>
@@ -515,6 +559,7 @@
 
 </body>
 </html>
+
 
 
 
